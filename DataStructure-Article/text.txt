@@ -1,0 +1,17 @@
+## Anotação para Trabalho de Estrutura de Dados ##
+
+Introdução clara e concisa: Explicar o que é ordenação e por que é importante em ciência da computação. Em seguida, apresentar brevemente os seis algoritmos que eu vou abordar.
+
+Descrição detalhada dos algoritmos: Fornecer uma explicação detalhada de cada algoritmo, como eles funcionam, o que é o Big O notation e como isso se aplica a cada um deles. Incluir exemplos de código para ilustrar o funcionamento dos algoritmos.
+
+Comparações entre os algoritmos: Comparar o tempo de execução de cada algoritmo para diferentes tamanhos de arrays e mostrar/discutir a diferenças entre eles. Isso pode ajudar os leitores a entender melhor a eficiência de cada algoritmo e quando eles devem ser usados.
+//////////////////////// Procurar Meios de gerar Gráficos /////////////////////////////////
+Análise empírica: Fornecer dados empíricos sobre o desempenho de cada algoritmo em diferentes cenários. Isso pode incluir gráficos, tabelas e outras visualizações para ajudar os leitores a compreender melhor as diferenças entre os algoritmos.
+
+Conclusão: Fazer uma conclusão geral sobre cada algoritmo e destaque seus pontos fortes e fracos. (Se necessário) Concluir com uma recomendação sobre quando usar cada algoritmo em diferentes situações.
+
+Dicas e truques: Dar dicas e truques para ajudar os leitores a implementar esses algoritmos de maneira eficiente. Isso pode incluir técnicas de otimização de código, estratégias para lidar com arrays de tamanho variável e outras sugestões úteis.
+
+Exemplos do mundo real: Exemplos do mundo real de como esses algoritmos são usados. Por exemplo, como o algoritmo Quick Sort é usado para classificar dados em grandes bancos de dados ou como o algoritmo Bubble Sort é usado em jogos de cartas.
+
+ 
