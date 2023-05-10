@@ -21,7 +21,6 @@ Existem diversos algoritmos de ordenação, cada um com suas próprias caracteri
 Antes de começar a falar sobre os algoritmos de ordenação existe um termo no qual é preciso ter conhecimento para falar sobre a complexidade dos algoritmos e sobre o tempo de execução de cada um.
 
 ### Big(O)
-
 A notação big(O) (ou grande O) é uma notação usada na ciência da computação para descrever o desempenho assintótico de um algoritmo (assintótico significa para todos os valores suficientemente grandes). É uma forma de medir o tempo que um algoritmo leva para ser executado em relação ao tamanho da entrada do problema.
 
 **O que isso significa?** A notação Big(O) representa a complexidade do pior caso de um algoritmo. O tempo máximo que ele pode levar para resolver um problema. Essa notação descreve como o tempo vai aumentar se o tamanho do problema também aumentar. Naturalmente, saber disso é útil pois podemos comparar algoritmos com diferentes complexidades e escolher o mais adequado para a uma tarefa em específico e garantir que o tempo de execução seja otimizado. Veja mais sobre [Big(O)](https://pt.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation) na Khan Academy.
