@@ -14,7 +14,7 @@ O nosso computador pensa da mesma forma, a ordenação é um dos processos mais 
 
 Existem diversos algoritmos de ordenação, cada um com suas próprias caracteristicas, complexidade e eficiência, além da finalidade de cada um, nesse artico iremos discutir sobre os seis algoritmos mais usados e conhecidos na computação. A escolha do melhor algoritmo de ordenação impacta diretamente no desempenho da ordenação e no uso dos recursos computacionais.
 
-## Descrição: Uma apresentação dos algoritmos e do Big(O).
+## Descrição: Uma apresentação dos algoritmos e da notação Big(O).
 
 **Caso já tenha conhecimento, sinta-se a vontade para pular essa parte**
 
