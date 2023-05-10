@@ -6,7 +6,7 @@ Para escolher o algoritmo de ordenação adequado, é importante considerar o ta
 
 ## Introdução: O mundo da ordenação.
 
-Imagine o quão dificultoso seria viver em um mundo caótico onde não existe ordem alfabética, ordem númerica, ordem de grandezas e nenhuma outra lógica, e qualquer ação é trabalhosa, como se procurassemos uma agulha no palheiro, imagine o quão difícil seria procurar um nome em uma agenda telefônica, uma palavra em um dicionário, ou o seu salgadinho favorito em um enorme supermercado.
+Imagine o quão dificultoso seria viver em um mundo caótico onde não existe ordem alfabética, ordem númerica, ordem de grandezas e nenhuma outra ordem lógica, automaticamente qualquer ação se torna trabalhosa e exaustiva, é como se, para qualquer coisa, tivessemos que procurar uma agulha no palheiro, imagine o quão difícil seria procurar um nome em uma agenda telefônica, uma palavra em um dicionário, ou o seu salgadinho favorito entre milhares de produtos em um enorme supermercado.
 
 É ai que entra a ordenação, viver em um mundo ordenado é muito mais bonito, fácil e organizado, todas as tarefas automaticamente se tornam mais leves e menos custosas pois seria mais fácil encontrar qualquer coisa e chegar em qualquer lugar.
 
