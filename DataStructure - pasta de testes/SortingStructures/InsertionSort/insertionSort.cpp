@@ -15,7 +15,7 @@ void insertionSort(int arr[], int length, int count){
     }
 
     std::cout << std::endl;
-    std::cout << "Quantidade de passos necessários para ordenar este array:" << count << std::endl;
+    std::cout << count << std::endl;
 }
 
 int main(){
