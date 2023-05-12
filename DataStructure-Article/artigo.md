@@ -1,5 +1,7 @@
 # Análise: Existe diferença entre os algoritmos de ordenação?
 
+![Empilhamento de caixas](./img/Logistics-bro.png)
+
 Os algoritmos de ordenação são rotinas computacionais que permitem que um conjunto de dados seja organizado em uma ordem específica. Eles são amplamente utilizados em várias aplicações, como classificação de resultados de pesquisa na web, processamento de grandes conjuntos de dados, organização de informações em bancos de dados e muito mais.
 
 Para escolher o algoritmo de ordenação adequado, é importante considerar o tamanho dos dados e a complexidade da lista que se deseja ordenar, bem como a eficiência necessária para completar a tarefa. Algoritmos mais simples, como o Bubble Sort e o Selection Sort, são mais eficientes para conjuntos de dados menores, enquanto algoritmos mais complexos, como o Merge Sort e o Quick Sort, são mais adequados para conjuntos de dados maiores.
@@ -21,6 +23,7 @@ Existem diversos algoritmos de ordenação, cada um com suas próprias caracteri
 Antes de começar a falar sobre os algoritmos de ordenação existe um termo no qual é preciso ter conhecimento para falar sobre a complexidade dos algoritmos e sobre o tempo de execução de cada um.
 
 ### Big(O)
+
 A notação big(O) (ou grande O) é uma notação usada na ciência da computação para descrever o desempenho assintótico de um algoritmo (assintótico significa para todos os valores suficientemente grandes). É uma forma de medir o tempo que um algoritmo leva para ser executado em relação ao tamanho da entrada do problema.
 
 **O que isso significa?** A notação Big(O) representa a complexidade do pior caso de um algoritmo. O tempo máximo que ele pode levar para resolver um problema. Essa notação descreve como o tempo vai aumentar se o tamanho do problema também aumentar. Naturalmente, saber disso é útil pois podemos comparar algoritmos com diferentes complexidades e escolher o mais adequado para uma tarefa em específico e garantir que o tempo de execução seja otimizado. Veja mais sobre [Big(O)](https://pt.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation) na Khan Academy.
@@ -37,6 +40,9 @@ Os códigos referentes aos algoritmos apresentados a seguir podem ser encontrado
    O bubble sort tem complexidade O(n²) visto que possui um loop dentro do outro, o primeiro loop vai passar por toda a lista repetidamente enquanto o segundo vai fazer as devidas ordenações.
 
    Dessa maneira, um algoritmo com essa complexidade cresce em tempo quadrático, o que significa que seu desempenho piora rapidamente à medida que o tamanho da lista aumenta.
+
+   Veja o pseudocodigo em portugol para o bubblesort
+
 2. **Selection sort:**
    O selection sort tem funcionamento parecido com o apresentado anteriormente, porém, apesar da complexidade ser a mesma, O(n²), esse algoritmo procura sempre colocar o menor valor no inicio da lista.
 
@@ -70,8 +76,9 @@ Os códigos referentes aos algoritmos apresentados a seguir podem ser encontrado
    1. Dividir a lista que será ordenada em duas metades iguais, recursivamente, até que cada sublista tenha apenas um elemento.
    2. Ordenar cada metade recursivamente, usando novamente o merge sort.
    3. Por fim, o algoritmo combina as duas metades ordenadas em uma única lista, fundindo as duas sublistas em ordem crescente e ordenando o algoritmo.
+
 6. **Quick sort:**
-   O quick sort, quando desconsideramos a escolha do termo pivô (você vai entender o motivo), pode ser considerado o algoritmo ideal para lidar com o processo de ordenação de listas grandes, pois usa a recursivide como sua maior aliada nesse processo.
+   O quick sort, quando desconsideramos a escolha do pivô (irei explicar o motivo), pode ser considerado o algoritmo ideal para lidar com o processo de ordenação de listas grandes, pois usa a recursivide como sua maior aliada nesse processo.
 
    Esse algoritmo trabalha escolhendo um termo como "pivô" e dividingo a lista em duas partes: elementos menores que o pivô e elementos maiores que o pivô. Em seguida, o algoritmo repete o processo recursivamente para as duas sub-listas até que a lista esteja totalmente ordenada.
 
@@ -83,28 +90,64 @@ Os códigos referentes aos algoritmos apresentados a seguir podem ser encontrado
    2. O algoritmo divide a lista em duas sub-listas, uma contendo os elementos menores que o pivô e outra contendo os elementos maiores que o pivô.
    3. O algoritmo ordena recursivamente as duas sub-listas usando o mesmo processo, escolhendo um novo pivô em cada sub-lista e particionando a lista novamente até que cada sub-lista contenha apenas um elemento. Em seguida, ele combina as sub-listas para obter a lista ordenada.
 
-## Comparação: Qual a diferença entre esses algoritmos? 
-Agora que os algoritmos foram devidamente apresentados, podemos começar a discutir a diferença entre eles, buscando um veredito acerca da pergunta: "Qual a diferença entre esses algoritmos?". 
+## Comparação: Qual a diferença entre esses algoritmos?
+
+Agora que os algoritmos foram devidamente apresentados, podemos começar a discutir a diferença entre eles, buscando um veredito acerca da pergunta: "Qual a diferença entre esses algoritmos?".
 
 A fim de comparar os algoritmos de ordenação, é importante definir uma medida comum para avaliar o desempenho de cada um. Para isso, são utilizadas métricas, inicialmente, o tempo de execução foi a métrica escolhida. Essas medidas permitem quantificar o tempo e os recursos necessários para ordenar um conjunto de dados, possibilitando uma avaliação objetiva da eficiência de cada algoritmo.
 
 Na computação, tudo acontece em uma velocidade incrível, o que torna o uso do tempo como medida ineficiente. Além disso, seria necessário trabalhar com listas enormes com mais de 1 milhão de itens para perceber a diferença entre os testes, o que pode ser inviável. Outro problema é que diferentes computadores podem apresentar resultados diferentes por causa do poder computacional de cada máquina, o que vai contra o método científico pois impossibilita a replicação dos experimentos. Para solucionar essas questões, é necessário utilizar medidas mais precisas e confiáveis. Isso permite que os resultados sejam comparáveis e que os experimentos possam ser replicados em diferentes ambientes.
 
-Ao avaliar o desempenho dos algoritmos de ordenação, o número de operações realizadas se tornou a métrica mais eficiente para calcular o tempo de execução de cada algoritmo. Embora não tenha utilizado uma métrica cronometrada, consegui uma medida numérica da quantidade de passos executados por cada algoritmo. Para garantir que todos os algoritmos fossem avaliados sob as mesmas condições, criei um algoritmo em C++ que gerou uma lista aleatória com 10, 100 e 1000 elementos, que foram usadas como entrada para todos os algoritmos. Em seguida, criei uma variável global chamada 'contador', que foi incrementada em 1 no final de cada loop e no início de cada condicional, permitindo que fosse calculado o número de passos de cada algoritmo.
+Ao avaliar o desempenho dos algoritmos de ordenação, o número de operações realizadas se tornou a métrica mais eficiente para calcular o tempo de execução de cada algoritmo. Embora não tenha utilizado uma métrica cronometrada, consegui uma medida numérica da quantidade de passos executados por cada algoritmo. Para garantir que todos os algoritmos fossem avaliados sob as mesmas condições, criei um algoritmo em C++ para gerar uma lista aleátória com 1000, outra com 2000, 3000... até 10000 elementos, que foram usadas como entrada para todos os algoritmos. Em seguida, criei uma variável global en cada código chamada 'contador', que foi incrementada em 1 no final de cada loop e no início de cada condicional, permitindo que fosse calculado o número de passos de cada algoritmo, pois dessa forma, toda ação do algoritmo seria contabilizada.
 
-É fundamental destacar que, devido ao uso da recursão no Merge Sort e no Quick Sort, o terminal mostrava várias saídas do número de passos para cada parte do código. Para exemplificar, quando o Merge Sort trabalhou com uma lista de 1000 valores, foram geradas mais de 200 linhas de resultados. Para minimizar erros humanos e tornar a análise mais precisa, foi utilizada a ferramenta [Planilhas](https://docs.google.com/spreadsheets/u/0/) do google para calcular esses valores.
+Após fazer os testes com cada algoritmo, os dados coletados foram postos em uma tabela afim de catalogar cada um deles:
 
-Após fazer os testes com cada algoritmo, os dados coletados foram postos em uma tabela afim de comparar cada um deles: 
+| Tamanho | Bubble sort (bu) | Selection sort (se) | Insertion sort (in) | Shell sort (sh) | Merge sort (me) | Quick sort (qu) |
+| :-----: | :---------: | :------------: | :------------: | :--------: | :--------: | :--------: |
+|  1000   |   757038    |     505912     |     257770     |   14995    |   29649    |   12779    |
+|  2000   |   2991997   |    2012849     |     993533     |   38125    |   65320    |   27118    |
+|  3000   |   6784307   |    4521053     |    2286546     |   59899    |   103759   |   43410    |
+|  4000   |  11985723   |    8029469     |    3988699     |   88375    |   142572   |   62822    |
+|  5000   |  18758893   |    12536882    |    6262611     |   113942   |   183891   |   82030    |
+|  6000   |  27024631   |    18047060    |    9029421     |   138798   |   225429   |   97938    |
+|  7000   |  36553991   |    24554874    |    12059152    |   173344   |   267339   |   123317   |
+|  8000   |  48082987   |    32063518    |    16088885    |   208895   |   309244   |   142075   |
+|  9000   |  60771988   |    40572369    |    20278692    |   226429   |   353114   |   157609   |
+|  10000  |  75062071   |    50080670    |    25069570    |   273441   |   397689   |   174120   |
 
-| Tamanho | Bubble sort | Selection sort | Insertion sort | Shell sort | Merge sort |Quick sort |
-| :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: |
-| 10 | 88 | 67 | 47 | 35 | 96 | 33 |
-| 100 | 7779 | 5405 | 2856 | 987 | 986 | 523 | 
-| 1000 | 747485 | 505675 | 248307 | 15413 | 13014 | 3197 |
+## Gráficos: 
+
+**Quando aparecer a notação 1e7 acima do gráfico, basta multiplicar o valor do eixo y por 10 milhões**
+
+Podemos observar a curva de crescimento de cada algoritmo e perceber claramente como os três primeiros algoritmos, que possuem complexidade O(n²), apresentam um crescimento vertiginoso. Conforme o tamanho do problema aumenta, a curva de crescimento desses algoritmos se asce n tua cada vez mais, demonstrando que seu desempenho é significativamente impactado pelo tamanho da entrada. Essa informação nos alerta para a necessidade de escolher cuidadosamente o algoritmo adequado para o problema em questão, a fim de evitar perda de desempenho ou até mesmo inviabilidade do processamento em casos de entradas muito grandes
+![Gráfico Bubble sort](img/download.png)
+
+![Gráfico Selection sort](img/download(1).png)
+
+![Gráfico Insertion sort](img/download(2).png)
+Nos próximos algoritmos, observamos a implementação da filosofia do "dividir para conquistar" e a complexidade assintótica reduzida para O(n log n). Nesses casos, o gráfico apresenta uma curva mais suave em relação aos algoritmos de complexidade O(n²), com um crescimento constante à medida que o tamanho do problema aumenta. Isso sugere que esses algoritmos podem ser mais eficientes e escaláveis ​​do que seus equivalentes O(n²) em problemas maiores. Essa abordagem é especialmente importante em aplicações que lidam com grandes conjuntos de dados ou necessitam de alta performance, pois pode permitir um processamento mais rápido e eficiente.
+![Gráfico Shell sort](img/download(3).png)
+
+![Gráfico Merge sort](img/download(4).png)
+
+![Gráfico Bubble sort](img/download(5).png)
+
+A melhor maneira de entender a diferença no desempenho dos algoritmos é comparando-os diretamente entre si. Analisando os resultados dos testes realizados, fica evidente o impacto da escolha do algoritmo no tempo de processamento. Notavelmente, a diferença de desempenho entre o algoritmo mais eficiente de complexidade O(n²) (insertion sort) e o algoritmo menos eficiente de complexidade O(n log n) (merge sort) é bastante significativa. 
+
+![Comparação entre gráficos](img/download(6).png)
 
 ## Conclusão: Quais foram os resultados obtidos?
-Ao analisar os resultados obtidos, fica evidente a diferença de desempenho entre os algoritmos de ordenação. Para ilustrar essa disparidade, basta comparar o Bubble Sort com o Quick Sort na tarefa de ordenar uma lista com 1000 valores. Enquanto o Bubble Sort executou aproximadamente 750 mil passos, o Quick Sort precisou de 3200 passos, aproximadamente, resultando em uma redução percentual de cerca de 99,57%. Ao comparar o Bubble Sort com o Merge Sort, outro algoritmo que usa a recursão, percebemos uma redução percentual de cerca de 98,27%, mostrando a eficiência da filosofia "dividir para conquistar". A tabela apresentada anteriormente mostra como cada algoritmo se sai com os mesmos problemas, revelando como os algoritmos com complexidade O(n²) crescem rapidamente em número de passos ao passo que o problema aumenta, enquanto os três últimos começam a dividir o problema em outros menores para simplificar a resolução e o crescimento é bem menor. 
 
-Os primeiros algoritmos de ordenação, como o Bubble Sort e o Selection Sort, possuem uma implementação mais simples e são ótimos para fins educacionais e para lidar com pequenos conjuntos de dados. No entanto, à medida que o tamanho dos dados aumenta, a complexidade desses algoritmos se torna rapidamente um gargalo para o desempenho, tornando-os inadequados para aplicações em larga escala. Por outro lado, algoritmos mais complexos, como o Merge Sort e o Quick Sort, são mais eficientes em lidar com grandes quantidades de dados, o que os torna ideais para aplicativos que exigem alta performance. A escolha do algoritmo de ordenação adequado é crucial para garantir que as soluções sejam escaláveis e eficientes.
+Os primeiros algoritmos de ordenação, como o Bubble Sort e o Selection Sort, possuem uma implementação mais simples e são ótimos para fins educacionais e para lidar com pequenos conjuntos de dados. No entanto, à medida que o tamanho dos dados aumenta, a complexidade desses algoritmos se torna rapidamente um gargalo para o desempenho, tornando-os inadequados para aplicações em larga escala. Por outro lado, algoritmos mais complexos, como o Merge Sort e o Quick Sort, são mais eficientes em lidar com grandes quantidades de dados, o que os torna ideais para aplicativos que exigem alta performance.
 
-Conclui-se, portanto, que a escolha do algoritmo adequado pode fazer uma grande diferença no desempenho da rotina de classificação, especialmente quando se trata de grandes conjuntos de dados. Todos os algoritmos conseguem ter o mesmo resultado quando se trata de ordenação, porém quando falamos de desempenho a história é outra, veja o Merge sort, para uma lista pequena com 10 itens, ele conseguiu ser pior que o Bubble sort, porém, para listas grandes ele se tornou mais eficiente que o Shell sort sendo, nesse caso, o segundo algoritmo mais eficiente de acordo com os testes realizados. 
+Ao analisar os resultados obtidos, fica evidente a diferença de desempenho entre os algoritmos de ordenação. Para ilustrar essa disparidade, basta comparar o Bubble Sort com o Quick Sort na tarefa de ordenar uma lista com 10 mil valores. Enquanto o Bubble Sort executou aproximadamente 75 milhões de passos, o Quick Sort precisou de 175 mil passos, aproximadamente, implicando em uma redução percentual de cerca de 99,7%. Agora, imagine que o tempo, uma medida cronométrica, está sendo usado como métrica, caso o Bubble sort ordene essa lista em 1 segundo, o Quick sort vai fazer o mesmo trabalho em 0.003 segundos, reforçando ainda mais o motivo da métrica usada ser o número de operações.  
+
+A tabela com os dados coletados mostra como cada algoritmo se sai com os mesmos problemas, revelando como os algoritmos com complexidade O(n²) crescem rapidamente em número de operações ao passo que o problema aumenta, enquanto os três últimos começam a dividir o problema em outros menores para simplificar a resolução e o crescimento é bem menor.
+
+Veja a comparação entre o número de passos de cada algoritmo ordenando a lista com 1000 valores: 
+
+![Comparação entre algoritmos](img/1mil.png)
+
+Evidentemete a escolha do algoritmo adequado pode fazer uma grande diferença no desempenho da ordenação, especialmente quando se trata de grandes conjuntos de dados. Todos os algoritmos conseguem ter o mesmo resultado quando se trata de ordenação, mas quando falamos de desempenho a história muda. 
+
+Portanto, conclui-se que a escolha da métrica usada como sendo o número de passos que um algoritmo leva para ordenar uma lista, nos fornece indiretamente o tempo de cada algoritmo em um ambiente hipotético, pois, com o cálculo da redução percentual, conseguimos calcular em quanto tempo cada algoritmo conseguiria resolver um problema levando em conta o resultado de outro algoritmo, pois com essa relação conseguimos fazer a seguinte comparação: Se o insertion sort ordena um array com 10 mil itens em 1 segundo, o merge sort levaria apenas 0,008 segundos para fazer o mesmo trabalho pois a redução percentual entre os dois é de aproximadamente 99.2%. 
