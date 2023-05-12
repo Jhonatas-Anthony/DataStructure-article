@@ -1,7 +1,5 @@
 # Análise: Existe diferença entre os algoritmos de ordenação?
 
-![Empilhamento de caixas](./img/Logistics-bro.png)
-
 Os algoritmos de ordenação são rotinas computacionais que permitem que um conjunto de dados seja organizado em uma ordem específica. Eles são amplamente utilizados em várias aplicações, como classificação de resultados de pesquisa na web, processamento de grandes conjuntos de dados, organização de informações em bancos de dados e muito mais.
 
 Para escolher o algoritmo de ordenação adequado, é importante considerar o tamanho dos dados e a complexidade da lista que se deseja ordenar, bem como a eficiência necessária para completar a tarefa. Algoritmos mais simples, como o Bubble Sort e o Selection Sort, são mais eficientes para conjuntos de dados menores, enquanto algoritmos mais complexos, como o Merge Sort e o Quick Sort, são mais adequados para conjuntos de dados maiores.
@@ -11,6 +9,8 @@ Para escolher o algoritmo de ordenação adequado, é importante considerar o ta
 Imagine o quão dificultoso seria viver em um mundo caótico onde não existe ordem alfabética, ordem númerica, ordem de grandezas e nenhuma outra ordem lógica, automaticamente qualquer ação se torna trabalhosa e exaustiva, é como se, para qualquer coisa, tivéssemos que procurar uma agulha no palheiro, imagine o quão difícil seria procurar um nome em uma agenda telefônica, uma palavra em um dicionário, ou o seu salgadinho favorito entre milhares de produtos em um enorme supermercado.
 
 É ai que entra a ordenação, viver em um mundo ordenado é muito mais bonito, fácil e organizado, todas as tarefas automaticamente se tornam mais leves e menos custosas pois seria mais fácil encontrar qualquer coisa e chegar em qualquer lugar.
+
+![Empilhamento de caixas](./img/Logistics-bro.png)
 
 O nosso computador pensa da mesma forma, a ordenação é um dos processos mais importantes na computação, pois permite que os dados sejam manipulados e acessados de maneira mais eficiente. Além de facilitar a busca de informações em dicionários e outros tipos de listas, a ordenação é fundamental em diversas áreas da computação. Por exemplo, em bancos de dados e arquivos, a organização dos dados em uma ordem específica pode facilitar a busca por informações. Ao realizar uma consulta em um banco de dados, o sistema pode utilizar o algoritmo de busca binária para encontrar rapidamente os registros que atendem aos critérios da consulta, aproveitando a organização dos dados em uma ordem determinada. Além disso, a ordenação também pode ser utilizada para reduzir o tempo de acesso aos dados em sistemas de armazenamento, como discos rígidos e SSDs. Ao organizar os dados em uma ordem específica, é possível reduzir o tempo de busca e leitura dos dados, tornando o acesso aos mesmos mais rápido e eficiente.
 
