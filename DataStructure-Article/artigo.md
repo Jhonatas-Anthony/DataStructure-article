@@ -18,7 +18,7 @@ Existem diversos algoritmos de ordenação, cada um com suas próprias caracteri
 
 ## Descrição: Uma apresentação dos algoritmos e da notação Big(O).
 
-**Caso já tenha conhecimento, sinta-se a vontade para pular essa parte**
+**Caso já tenha conhecimento em big(O) e nos seis algoritmos que serão apresentados a seguir, sinta-se a vontade para pular essa parte**
 
 Antes de começar a falar sobre os algoritmos de ordenação existe um termo no qual é preciso ter conhecimento para falar sobre a complexidade dos algoritmos e sobre o tempo de execução de cada um.
 
